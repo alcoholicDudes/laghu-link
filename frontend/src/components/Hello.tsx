@@ -1,18 +1,18 @@
-import * as React from "react";
+import * as React from 'react'
 
 export interface HelloProps {
-  first_name: string;
-  last_name: string;
+  first_name: string
+  last_name: string
 }
 
 const Hello = (props: HelloProps) => {
-  const { first_name = "John", last_name = "Doe" } = props;
+  const {first_name = 'John', last_name = 'Doe'} = props
 
   return (
     <h1>
       Hello from {first_name} {last_name}!
     </h1>
-  );
-};
+  )
+}
 
-export default Hello;
+export default Hello
