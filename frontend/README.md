@@ -1,4 +1,4 @@
-#  लघु-link
+#  लघु-link-frontend
 a URL shortener that doesn't suck
 
 ## Installation
