@@ -1,4 +1,4 @@
-let auth = {}
+const auth = {}
 
 function loadAuthToken() {
   const authToken = localStorage.getItem('current_auth_token')
