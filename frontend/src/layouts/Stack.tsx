@@ -10,7 +10,7 @@ interface Props {
 }
 const StackLayout = ({children, title}: Props) => {
   return (
-    <Box styles={{height: '100vh'}}>
+    <Box height="100vh" bgColor="dark-1">
       {/* TITLE_BAR */}
       {/* <OverflowBox fill="vertical">{children}</OverflowBox> */}
     </Box>
