@@ -1,28 +1,28 @@
+// library imports
 import React from 'react'
-import logo from './logo.svg'
-import './App.scss'
+import {BrowserRouter as Router, Switch} from 'react-router-dom'
 
-import Hello from './components/Hello'
+import './App.scss'
+import routes from 'routes'
+import PublicRoute from 'routes/Public'
+import PublicOnlyRoute from 'routes/PublicOnly'
+import PrivateRoute from 'routes/Private'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Hello first_name="Jonny" last_name="Sins" />
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        {routes.map(route => {
+          if (route.private) {
+            return <PrivateRoute key={route.path} {...route} />
+          } else if (route.publicOnly) {
+            return <PublicOnlyRoute key={route.path} {...route} />
+          } else {
+            return <PublicRoute key={route.path} {...route} />
+          }
+        })}
+      </Switch>
+    </Router>
   )
 }
 
