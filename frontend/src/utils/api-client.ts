@@ -8,11 +8,11 @@ import {getAuthToken, loadAuthToken} from 'utils/auth-singleton'
  *  - additional standard headers & configs can be passed
  *    to create this instance.
  */
-export default (headers, ...config) => {
+export default (headers: Record<string, any>, ...config: Array<any>) => {
   // TODO: move it to its place
   loadAuthToken()
 
-  let defaultHeaders = {
+  let defaultHeaders: {[key: string]: any} = {
     Accept: 'application/json',
     'Content-Type': 'application/json',
   }
