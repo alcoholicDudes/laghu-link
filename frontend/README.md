@@ -1,8 +1,10 @@
-#  लघु-link-frontend
+# gaming-zone-frontend
 
 ## Installation
 
-Use yarn package manager [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) to install Java-script dependencies
+Use yarn package manager
+[yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) to install
+Java-script dependencies
 
 ```sh
 yarn
@@ -15,5 +17,5 @@ yarn start
 ```
 
 ## Built with
-* [React](https://reactjs.org/)
 
+- [React](https://reactjs.org/)
